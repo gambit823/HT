@@ -231,6 +231,8 @@ services:
       - "/mnt/storage/media/exercisevideos:/data/exercisevideos"
       - "/mnt/storage/media/movies:/data/movies"
       - "/mnt/storage/appdata/shared:/shared"
+    ports:
+      - 32400:32400/tcp
   portainer: 
     container_name: portainer
     image: portainer/portainer:latest
