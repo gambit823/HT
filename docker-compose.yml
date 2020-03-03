@@ -181,6 +181,8 @@ services:
       - traefik.frontend.headers.STSIncludeSubdomains=true
       - traefik.frontend.headers.STSPreload=true
       - traefik.frontend.headers.frameDeny=false
+    ports:
+      - 7880:80
     networks: 
       - traefik_proxy
     restart: always
@@ -247,6 +249,8 @@ services:
       - traefik.frontend.headers.STSIncludeSubdomains=true
       - traefik.frontend.headers.STSPreload=true
       - traefik.frontend.headers.frameDeny=false
+    ports:
+      - 9000:9000
     networks: 
       - traefik_proxy
     restart: always
@@ -274,6 +278,8 @@ services:
       - traefik.frontend.headers.STSIncludeSubdomains=true
       - traefik.frontend.headers.STSPreload=true
       - traefik.frontend.headers.frameDeny=false
+    ports:
+      - 7878:7878    
     networks: 
       - traefik_proxy
     restart: always
@@ -339,6 +345,8 @@ services:
       - traefik.frontend.headers.frameDeny=false
     links: 
       - sabnzbd
+    ports:
+      - 8989:8989
     networks: 
       - traefik_proxy
     restart: always
@@ -374,6 +382,8 @@ services:
       - traefik.frontend.headers.frameDeny=false
     links: 
       - plex
+    ports:
+      - 8181:8181
     networks: 
       - traefik_proxy
     restart: always
