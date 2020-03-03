@@ -304,6 +304,8 @@ services:
       - traefik.frontend.headers.STSIncludeSubdomains=true
       - traefik.frontend.headers.STSPreload=true
       - traefik.frontend.headers.frameDeny=false
+    ports:
+      - 8080:8080
     networks: 
       - traefik_proxy
     restart: always
