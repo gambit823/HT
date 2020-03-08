@@ -208,7 +208,7 @@ services:
     volumes:
       - /mnt/storage/media/download-reprocess:/download-reprocess
       - /mnt/storage/appdata/plex:/config
-      - /mnt/storage-usb/media/tv:/data/tvshows
+      - /mnt/storage/media/tv:/data/tvshows
       - /mnt/storage/media/homemovies:/data/homemovies
       - /mnt/storage/media/photos:/data/photos
       - /mnt/storage/media/exercisevideos:/data/exercisevideos
@@ -225,7 +225,7 @@ services:
     volumes: 
       - "/mnt/storage/appdata/plex:/config"
       - "/mnt/storage/media/TEMP_POSTPROCESSING:/transcode"
-      - "/mnt/storage-usb/media/tv:/data/tvshows"
+      - "/mnt/storage/media/tv:/data/tvshows"
       - "/mnt/storage/media/homemovies:/data/homemovies"
       - "/mnt/storage/media/photos:/data/photos"
       - "/mnt/storage/media/exercisevideos:/data/exercisevideos"
@@ -355,7 +355,7 @@ services:
     volumes: 
       - "/mnt/storage/appdata/sonarr:/config"
       - "/mnt/storage/media/tv_import:/tv_import"
-      - "/mnt/storage-usb/media/tv:/tv"
+      - "/mnt/storage/media/tv:/tv"
       - "/mnt/storage/media/downloads:/downloads"
       - "/mnt/storage/appdata/shared:/shared"
   tautulli: 
