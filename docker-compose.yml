@@ -12,10 +12,9 @@ services:
     environment:
       - PUID=${PUID}
       - PGID=${PGID}
-      - TZ=America/Chicago
+      - "TZ=${TZ}"
     ports:
-      - 80:80
-      - 443:443
+      - 7880:80
     restart: always
     volumes: 
       - "/mnt/storage/appdata/organizr:/config"
