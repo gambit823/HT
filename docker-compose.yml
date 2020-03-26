@@ -6,15 +6,16 @@ networks:
 services: 
 version: "2"
 services:
-  organizr: 
-    container_name: organizr
-    environment: 
-      - "PUID=${PUID}"
-      - "PGID=${PGID}"
-      - "TZ=${TZ}"
-    image: lsiocommunity/organizr:latest
+  heimdall:
+    image: linuxserver/heimdall
+    container_name: heimdall
+    environment:
+      - PUID=${PUID}
+      - PGID=${PGID}
+      - TZ=America/Chicago
     ports:
-      - 7880:80
+      - 80:80
+      - 443:443
     restart: always
     volumes: 
       - "/mnt/storage/appdata/organizr:/config"
