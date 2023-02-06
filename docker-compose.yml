@@ -96,7 +96,7 @@ services:
     environment: 
       - "PUID=${PUID}"
       - "PGID=${PGID}"
-    image: linuxserver/sonarr:preview
+    image: lscr.io/linuxserver/sonarr:latest
     links: 
       - sabnzbd
     ports:
